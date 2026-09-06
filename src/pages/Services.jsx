@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 const disciplines = [
   {
@@ -69,7 +67,6 @@ function Discipline({ discipline, reverse }) {
 function Services() {
   return (
     <div className="min-h-screen bg-[#fafafa] text-[#181818]">
-      <Navbar />
       <main>
         <section className="mx-auto max-w-7xl px-6 pb-20 pt-20 md:px-10 md:pb-28 md:pt-28">
           <h1 className="font-serif text-5xl md:text-7xl">Our Disciplines</h1>
@@ -84,7 +81,6 @@ function Services() {
           ))}
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

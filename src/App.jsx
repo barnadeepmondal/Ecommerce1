@@ -1,15 +1,22 @@
-import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// The portfolio page is the site's home page.
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+
 import Home from "./pages/Portfolio";
 import Philosophy from "./pages/Philosophy";
 import Inquiry from "./pages/Inquiry";
-import Consultation from "./pages/Consultation";
+import Projects from "./pages/Projects";
+import ProjectDetails from "./pages/ProjectDetails";
 import Services from "./pages/Services";
+import Consultation from "./pages/Consultation";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+      <Navbar />
 
       <Routes>
 
@@ -20,22 +27,19 @@ function App() {
           element={<Philosophy />}
         />
 
-        <Route path="/services" element={<Services />} />
-
         <Route
           path="/inquiry"
           element={<Inquiry />}
         />
 
-        <Route
-          path="/consultation"
-          element={<Consultation />}
-        />
-
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/consultation" element={<Consultation />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:slug" element={<ProjectDetails />} />
 
       </Routes>
 
+      <Footer />
     </BrowserRouter>
   );
 }

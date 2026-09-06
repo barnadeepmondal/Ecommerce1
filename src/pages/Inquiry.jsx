@@ -1,7 +1,5 @@
 import { useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-
+import { Link } from "react-router-dom";
 function Inquiry() {
 
   const [formData, setFormData] = useState({
@@ -36,8 +34,6 @@ function Inquiry() {
   return (
     <div className="bg-white text-black">
 
-      <Navbar />
-
       <main>
 
         {/* ================= INTRO ================= */}
@@ -60,15 +56,17 @@ function Inquiry() {
 
             </div>
 
-            <div>
-
+            <Link
+              to="/projects/lumina-residence"
+              className="block"
+              aria-label="View Lumina Residence project"
+            >
               <img
-                src="images/architecture.png"
+                src="/images/architecture.png"
                 alt="Architecture studio"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[500px] object-cover transition-transform duration-500 hover:scale-[1.02]"
               />
-
-            </div>
+            </Link>
 
           </div>
 
@@ -324,8 +322,6 @@ function Inquiry() {
         </section>
 
       </main>
-
-      <Footer />
 
     </div>
   );

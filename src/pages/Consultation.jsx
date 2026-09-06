@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 function Consultation() {
   const [submitted, setSubmitted] = useState(false);
@@ -12,7 +10,6 @@ function Consultation() {
 
   return (
     <div className="min-h-screen bg-white text-black">
-      <Navbar />
       <main className="max-w-3xl mx-auto px-6 md:px-10 py-20 md:py-28">
         <p className="text-xs tracking-[0.2em] text-gray-500">AESTHETIQUE</p>
         <h1 className="mt-5 font-serif text-5xl md:text-6xl">Book a consultation</h1>
@@ -45,7 +42,6 @@ function Consultation() {
           </form>
         )}
       </main>
-      <Footer />
     </div>
   );
 }

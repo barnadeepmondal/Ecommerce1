@@ -39,6 +39,17 @@ function Navbar() {
           </Link>
 
           <Link
+            to="/projects"
+            className={`text-xs tracking-[0.15em] uppercase ${
+              location.pathname.startsWith("/projects")
+                ? "text-black font-semibold"
+                : "text-gray-500"
+            }`}
+          >
+            Projects
+          </Link>
+
+          <Link
             to="/philosophy"
             className={`text-xs tracking-[0.15em] uppercase ${
               location.pathname === "/philosophy"
@@ -117,7 +128,19 @@ function Navbar() {
                   : "text-gray-500"
               }`}
             >
-              Portfolio
+            Portfolio
+          </Link>
+
+            <Link
+              to="/projects"
+              onClick={closeMenu}
+              className={`text-xs tracking-[0.15em] uppercase ${
+                location.pathname.startsWith("/projects")
+                  ? "text-black font-semibold"
+                  : "text-gray-500"
+              }`}
+            >
+              Projects
             </Link>
 
             <Link

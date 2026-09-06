@@ -1,11 +1,8 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 function Philosophy() {
   return (
     <div className="bg-white text-black">
-
-      <Navbar />
 
       <main>
 
@@ -54,13 +51,17 @@ function Philosophy() {
 
             </div>
 
-            <div>
+            <Link
+              to="/projects/concrete-house"
+              className="block overflow-hidden"
+              aria-label="View Concrete House project"
+            >
               <img
                 src="/images/screen.jpg"
                 alt="Material architecture"
-                className="w-full h-[420px] object-cover"
+                className="w-full h-[420px] object-cover transition-transform duration-500 hover:scale-105"
               />
-            </div>
+            </Link>
 
           </div>
 
@@ -74,15 +75,19 @@ function Philosophy() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
-              <div className="order-2 md:order-1">
+              <Link
+                to="/projects/coastal-retreat"
+                className="order-2 block overflow-hidden md:order-1"
+                aria-label="View Coastal Retreat project"
+              >
 
                 <img
                   src="/images/timeless.png"
                   alt="Timeless architecture"
-                  className="w-full h-[420px] object-cover"
+                  className="w-full h-[420px] object-cover transition-transform duration-500 hover:scale-105"
                 />
 
-              </div>
+              </Link>
 
               <div className="order-1 md:order-2">
 
@@ -137,8 +142,6 @@ function Philosophy() {
         </section>
 
       </main>
-
-      <Footer />
 
     </div>
   );

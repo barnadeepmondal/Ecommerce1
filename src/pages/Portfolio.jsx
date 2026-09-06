@@ -1,11 +1,8 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <div className="bg-white text-black">
-
-      <Navbar />
 
       <main>
 
@@ -123,9 +120,12 @@ function Home() {
               Selected Works
             </h2>
 
-            <span className="text-xs tracking-widest border-b border-black pb-1">
+            <Link
+              to="/projects"
+              className="text-xs tracking-widest border-b border-black pb-1 hover:text-gray-600"
+            >
               VIEW ALL
-            </span>
+            </Link>
 
           </div>
 
@@ -133,7 +133,11 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:h-[750px]">
 
             {/* Large image */}
-            <div className="md:col-span-8 relative overflow-hidden">
+            <Link
+              to="/projects/glass-pavilion"
+              className="md:col-span-8 relative overflow-hidden block"
+              aria-label="View The Glass Pavilion project"
+            >
 
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA4Mz7PYUlWoS2hB4tNfRronMxl9U3bK015ZnY-PSF6XM3Aa0JkhzK9pjc7z2Ms9mddSU-voUcG6LCwjk_wFhlSUzU8gPWn9XLNE95Ymga2IfQk1fzomuHP88NdEPGQE6ElZms5HaCmjYt8n3Qru7ErrJEf17xYA5dlasoSiu6L_TnI5JD85U49Gqa5UoNRMFfvYzkBOqr2VsejuwKyF_3tiLTrKcnmDqmMH6SRj9rpg-rcLxmqAxs"
@@ -153,11 +157,15 @@ function Home() {
 
               </div>
 
-            </div>
+            </Link>
 
 
             {/* Right top */}
-            <div className="md:col-span-4 relative overflow-hidden">
+            <Link
+              to="/projects/nexus-tower"
+              className="md:col-span-4 relative overflow-hidden block"
+              aria-label="View Nexus Tower project"
+            >
 
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWqyP4SvgE0_Vg285dcFiXtnGYTtve1cA2PXpBwP3SoHnjMWlHnsuCgyB_Xx4N2QywUTTaI_iszM5mukGTOXkAG5KV-bAGcU9PfVvxTnZTtQW00ybMZ_NOsO-Za3mTBRwOSmhuv3XNhlzA9Gw8OBXj5rtXEDGeucPJppXONZzHkd9tGo7ltwhwlVN4Edx4y--np-dI0bFAAq1V1ubV2ZevjRUuCv24TzWbqZZNjbJxe0L7hS4ZtFY2"
@@ -177,11 +185,15 @@ function Home() {
 
               </div>
 
-            </div>
+            </Link>
 
 
             {/* Right bottom */}
-            <div className="md:col-span-4 relative overflow-hidden">
+            <Link
+              to="/projects/lumina-residence"
+              className="md:col-span-4 relative overflow-hidden block"
+              aria-label="View Lumina Residence project"
+            >
 
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMoKiPToV_je79_uxb8FWeV2JIICj_OAgVm6Hk5HtbNOnqVe172NaX0HnuMlGOHPnEggD-G_34Et83pyDWAho5Suy-sSrEf1lnVs9ejhyP-LuZJwHlwtgW5KAS_PDNVBlPjfaBjZl9vTkO8TVGUjyb-UCjTd1-K3l3R7Rs2SIfxwXXyUSzKAOTos_FZddT8WCz7fwWQY6E8n-7lE9b7vMa7blgEtYVlQbGw6RIPjmnqrXn2mjGkqsr"
@@ -201,7 +213,7 @@ function Home() {
 
               </div>
 
-            </div>
+            </Link>
 
           </div>
 
@@ -246,20 +258,18 @@ function Home() {
               with our principal architects.
             </p>
 
-            <a
-              href="/inquiry"
+            <Link
+              to="/inquiry"
               className="inline-block mt-8 bg-black text-white px-10 py-4 text-xs tracking-widest font-semibold hover:bg-gray-800"
             >
               START YOUR PROJECT
-            </a>
+            </Link>
 
           </div>
 
         </section>
 
       </main>
-
-      <Footer />
 
     </div>
   );
